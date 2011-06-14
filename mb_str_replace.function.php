@@ -2,7 +2,7 @@
 /**
  * マルチバイト対応 str_replace()
  * 
- * @version		Release 3
+ * @version     Release 3
  * @author      HiNa <hina@bouhime.com>
  * @copyright   Copyright (C) 2006-2007,2011 by HiNa <hina@bouhime.com>. All rights reserved.
  * @license     2-cause BSD License(Simplified BSD License)
