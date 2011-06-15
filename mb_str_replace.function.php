@@ -2,10 +2,11 @@
 /**
  * マルチバイト対応 str_replace()
  * 
+ * @package     mb_str_replace
  * @version     Release 3
  * @author      HiNa <hina@bouhime.com>
  * @copyright   Copyright (C) 2006-2007,2011 by HiNa <hina@bouhime.com>. All rights reserved.
- * @license     2-cause BSD License(Simplified BSD License)
+ * @license     https://github.com/fetus-hina/mb_str_replace/blob/master/LICENSE 2-cause BSD License(Simplified BSD License)
  * @link        http://fetus.k-hsu.net/document/programming/php/mb_str_replace.html
  * @link        https://github.com/fetus-hina/mb_str_replace
  */
@@ -20,7 +21,8 @@ if(!function_exists('mb_str_replace')) {
      *
      * @return  mixed   $subject 内の $search を $replace で置き換えた文字列
      *
-     * @note    この関数の $search, $replace, $subject は配列に対応していますが、PHP 標準の str_replace() と挙動が異なります。
+     * この関数の $search, $replace, $subject は配列に対応していますが、
+     * $search, $replace が配列の場合の挙動が PHP 標準の str_replace() と異なります。
      */
     function mb_str_replace($search, $replace, $subject, $encoding = 'auto') {
         if(!is_array($search)) {
