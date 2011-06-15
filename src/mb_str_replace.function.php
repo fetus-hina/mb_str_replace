@@ -19,7 +19,7 @@ if(!function_exists('mb_str_replace')) {
      * @param   mixed   $subject    対象文字列（またはその配列）
      * @param   string  $encoding   文字列のエンコーディング(省略: 内部エンコーディング)
      *
-     * @return  mixed   $subject 内の $search を $replace で置き換えた文字列
+     * @return  mixed   subject 内の search を replace で置き換えた文字列
      *
      * この関数の $search, $replace, $subject は配列に対応していますが、
      * $search, $replace が配列の場合の挙動が PHP 標準の str_replace() と異なります。
