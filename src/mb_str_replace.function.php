@@ -1,14 +1,19 @@
 <?php
-/**
+/*
  * マルチバイト対応 str_replace()
  * 
- * @package     mb_str_replace
- * @version     Release 3
- * @author      HiNa <hina@bouhime.com>
- * @copyright   Copyright (C) 2006-2007,2011 by HiNa <hina@bouhime.com>. All rights reserved.
- * @license     https://github.com/fetus-hina/mb_str_replace/blob/master/LICENSE 2-cause BSD License(Simplified BSD License)
- * @link        http://fetus.k-hsu.net/document/programming/php/mb_str_replace.html
- * @link        https://github.com/fetus-hina/mb_str_replace
+ * Release 3 update 1
+ *
+ * Copyright (C) 2006,2007,2011,2012 by HiNa <hina@bouhime.com>. All rights reserved.
+ *
+ * LICENSE
+ *
+ * This source file is subject to the 2-clause BSD License(Simplified
+ * BSD License) that is bundled with this package in the file LICENSE.
+ * The license is also available at this URL:
+ * https://github.com/fetus-hina/mb_str_replace/blob/master/LICENSE
+ *
+ * http://fetus.k-hsu.net/document/programming/php/mb_str_replace.html
  */
 if(!function_exists('mb_str_replace')) {
     /**
