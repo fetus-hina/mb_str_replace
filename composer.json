@@ -1,0 +1,22 @@
+{
+    "name": "jp3cki/mb_str_replace",
+    "description": "The mb_str_replace() implementation.",
+    "type": "library",
+    "license": "MIT",
+    "version": "3.1.1",
+    "authors": [
+        {
+            "name": "AIZAWA Hina",
+            "email": "hina@bouhime.com"
+        }
+    ],
+    "require": {
+        "php":  ">=5.1",
+        "ext-mbstring": "*"
+    },
+    "require-dev": {
+        "phpmd/phpmd": "~2.2",
+        "phpunit/phpunit": "4.*",
+        "squizlabs/php_codesniffer": "2.*"
+    }
+}
