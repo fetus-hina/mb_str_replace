@@ -2,7 +2,7 @@
 /*
  * マルチバイト対応 str_replace()
  * 
- * @version 3.1.1
+ * @version 4.0.0
  * @copyright 
  * @copyright 2006,2007,2011,2012,2015 by AIZAWA Hina <hina@bouhime.com>
  * @license https://github.com/fetus-hina/mb_str_replace/blob/master/LICENSE MIT
@@ -26,7 +26,15 @@ if (!function_exists('mb_str_replace')) {
             $search = array($search);
         }
         if (!is_array($replace)) {
-            $replace = array($replace);
+            // PHP manual:
+            //      search が配列で replace が文字列の場合、
+            //      この置換文字列が search の各値について使用されます。
+            //
+            // array_fill_keysは5.2以上なので使えない...
+            $replace = array_combine(
+                array_keys($search),
+                array_fill(0, count($search), $replace)
+            );
         }
         if (strtolower($encoding) === 'auto') {
             $encoding = mb_internal_encoding();

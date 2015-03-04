@@ -48,7 +48,7 @@ class FuncTest extends PHPUnit_Framework_TestCase
             mb_str_replace($replFrom, $replTo, $subject, $charset)
         );
     }
-        
+
     public function scalarTestProvider()
     {
         $set = array(
@@ -63,6 +63,13 @@ class FuncTest extends PHPUnit_Framework_TestCase
                 "Hll Wrld f PHP",
                 array("a", "e", "i", "o", "u", "A", "E", "I", "O", "U"),
                 "",
+                "Hello World of PHP",
+                "UTF-8"
+            ),
+            array(
+                "H*ll* W*rld *f PHP",
+                array("a", "e", "i", "o", "u", "A", "E", "I", "O", "U"),
+                "*",
                 "Hello World of PHP",
                 "UTF-8"
             ),
