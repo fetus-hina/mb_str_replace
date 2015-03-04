@@ -3,7 +3,6 @@
  * マルチバイト対応 str_replace()
  * 
  * @version 4.0.0
- * @copyright 
  * @copyright 2006,2007,2011,2012,2015 by AIZAWA Hina <hina@bouhime.com>
  * @license https://github.com/fetus-hina/mb_str_replace/blob/master/LICENSE MIT
  */
