@@ -3,6 +3,8 @@ mb\_str\_replace
 
 The mb\_str\_replace() implementation.
 
+[![Build Status](https://travis-ci.org/fetus-hina/mb_str_replace.svg)](https://travis-ci.org/fetus-hina/mb_str_replace)
+
 Install
 -------
 
