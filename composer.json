@@ -3,7 +3,7 @@
     "description": "The mb_str_replace() implementation.",
     "type": "library",
     "license": "MIT",
-    "version": "4.0.0",
+    "version": "4.0.1",
     "authors": [
         {
             "name": "AIZAWA Hina",
@@ -18,5 +18,10 @@
         "phpmd/phpmd": "~2.2",
         "phpunit/phpunit": "4.*",
         "squizlabs/php_codesniffer": "2.*"
+    },
+    "autoload": {
+        "files": [
+            "src/mb_str_replace.function.php"
+        ]
     }
 }
