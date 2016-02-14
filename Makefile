@@ -1,29 +1,28 @@
-all: init
+all: composer.phar vendor test composer.lock.travis
 
-init: install-composer depends-install
-
-install-composer: composer.phar
-
-depends-install: install-composer
-	php composer.phar install
-
-depends-update: install-composer
-	php composer.phar self-update
-	php composer.phar update
-
-test:
+test: vendor
 	vendor/bin/phpunit
 
-check-style:
+check-style: vendor
 	vendor/bin/phpcs --standard=PSR2 src
 
-fix-style:
+fix-style: vendor
 	vendor/bin/phpcbf --standard=PSR2 src
 
 clean:
-	rm -rf vendor composer.phar clover.xml
+	rm -rf vendor composer.phar composer.lock clover.xml
 
 composer.phar:
 	curl -sS https://getcomposer.org/installer | php
 
-.PHONY: all init install-composer depends-install depends-update test clean check-style fix-style
+composer.lock: composer.phar composer.json
+	php composer.phar update
+
+composer.lock.travis: composer.lock
+	cp composer.lock composer.lock.travis
+
+vendor: composer.phar composer.lock
+	php composer.phar install
+	touch vendor
+
+.PHONY: all test clean check-style fix-style
