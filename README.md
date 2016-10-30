@@ -16,15 +16,37 @@ Other ways:
 * Use as submodule (see git manual)
 * Copy the source into your development directory (DO NOT rewrite copyright, see [License](#license) section)
 
-Usage
------
+Use
+---
 
-1. `require` or `include` the source.
-    ```php
-    require_once('/path/to/vendor/jp3cki/mb_str_replace/src/mb_str_replace.function.php');
-    ```
+### If using composer
 
-2. Enjoy!
+You can use `mb_str_replace` function after `require('vendor/autoload.php')`.
+
+### If not using composer
+
+`require` or `include` the source.
+
+```php
+require_once('/path/to/mb_str_replace.function.php');
+```
+
+API
+---
+
+```php
+function mb_str_replace(
+    string|array $search,
+    string|array $replace,
+    string|array $subject,
+    string $encoding = 'auto'
+) : string|array
+```
+
+Please refer [str_replace](http://php.net/manual/en/function.str-replace.php).
+
+Note: This module doesn't support `$count` parameter.
+
 
 License
 -------
