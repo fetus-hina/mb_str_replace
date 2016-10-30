@@ -45,6 +45,8 @@ function mb_str_replace(
 
 Please refer [str_replace](http://php.net/manual/en/function.str-replace.php).
 
+`$encoding` = `auto` means "use internal-encoding."
+
 Note: This module doesn't support `$count` parameter.
 
 
